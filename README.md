@@ -6,3 +6,5 @@ Is designed to work with the CSM product which has been created by Sweco Denmark
 At the moment is designed for openlayers 2 but will be upgraded for openlayers 4.
 
 
+<i> Example of output </i>
+![Image of output](https://github.com/RayTimlin/project-gis-web/blob/main/webtool.png)
