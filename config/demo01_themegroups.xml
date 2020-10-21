@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themegroups>
+
+    <!-- 
+    ===============================================================
+    SpatialMap, copyright Sweco GIS&IT
+    ===============================================================
+    $URL: http://vinkel.ghop.lan/svn/SPS/spatialmap/trunk/spatialmap/WEB-INF/config/profiles/includes/custom/demo01_themegroups.xml $ 
+    $Date: 2016-03-11 10:37:36 +0100 (Fri, 11 Mar 2016) $
+    $Revision: 8898 $ 
+    $Author: nsm $
+    =============================================================== 
+    -->
+
+    <themegroup displayname="[text:custom.profile.demo01.themegroups.displayname_001]" expanded="true" name="basemap" type="radiobutton" selectable="true"/>
+    <include src="[module:flyfotoarkivet.dir]/profiles/includes/themegroups.xml" ignore="not ModuleDefined('flyfotoarkivet')" onlychildnodes="true" selectable="true" />
+    <include src="[module:blom.dir]/profiles/includes/themegroups.xml" ignore="not ModuleDefined('flyfotoarkivet')" onlychildnodes="true" selectable="true" />
+    <include src="[module:cowi.dir]/profiles/includes/themegroups.xml" ignore="not ModuleDefined('cowi')" onlychildnodes="true" selectable="true" />
+    
+    <themegroup displayname="[text:custom.profile.demo01.themegroups.displayname_003]" expanded="false" name="teknisk.adm" type="checkbutton" selectable="true" />
+    <themegroup displayname="[text:custom.profile.demo01.themegroups.displayname_004]" expanded="false" name="vvs" type="checkbutton" selectable="true" />
+    <themegroup displayname="[text:custom.profile.demo01.themegroups.displayname_005]" expanded="false" name="vejtrafik" type="checkbutton" selectable="true" />
+    <themegroup displayname="[text:custom.profile.demo01.themegroups.displayname_006]" expanded="false" name="byg" type="checkbutton" selectable="true" />
+    <themegroup displayname="[text:custom.profile.demo01.themegroups.displayname_007]" expanded="false" name="byplan" type="checkbutton" selectable="true" />
+    <themegroup displayname="[text:custom.profile.demo01.themegroups.displayname_008]" expanded="false" name="miljoaff" type="checkbutton" selectable="true" />
+    <themegroup displayname="[text:custom.profile.demo01.themegroups.displayname_009]" expanded="false" name="skole" type="checkbutton" selectable="true" />
+    <themegroup displayname="[text:custom.profile.demo01.themegroups.displayname_010]" expanded="false" name="geus" type="checkbutton" selectable="true" ignore="not ModuleDefined('geus')" />
+    <themegroup displayname="[text:custom.profile.demo01.themegroups.displayname_013]" expanded="false" name="findfisken" type="checkbutton" selectable="true" ignore="not ModuleDefined('findfisken')" />
+    <themegroup displayname="[text:custom.profile.demo01.themegroups.displayname_014]" expanded="false" name="smqltest" type="checkbutton" selectable="true" ignore="not ModuleDefined('smqltest')"/>
+    <themegroup displayname="[text:custom.profile.demo01.themegroups.displayname_011]" expanded="false" name="oevrig" type="checkbutton" selectable="true" />
+
+    <!-- Datamodulet -->
+    <include src="[module:datamodul.dir]/profiles/includes/themegroups.xml" onlychildnodes="true" ignore="not ModuleDefined('datamodul')" mustexist="true" />
+
+<!-- 
+    <include onlychildnodes="true" src="[module:gst.dir]/profiles/includes/themegroups.xml" ignore="not ModuleDefined('gst')" />
+    <include onlychildnodes="true" src="[module:plansystem.dir]/profiles/includes/themegroups.xml" ignore="not ModuleDefined('plansystem')" />
+    <include onlychildnodes="true" src="[module:geus.dir]/profiles/includes/themegroups.xml" ignore="not ModuleDefined('geus')" />
+    <include onlychildnodes="true" src="[module:fvm.dir]/profiles/includes/themegroups.xml"  ignore="not ModuleDefined('fvm')"/>
+    <include onlychildnodes="true" src="[module:kulturarv.dir]/profiles/includes/themegroups.xml"  ignore="not ModuleDefined('kulturarv')"/>
+    <include onlychildnodes="true" src="[module:dai_land.dir]/profiles/includes/themegroups.xml" ignore="not ModuleDefined('dai_land')" />
+    <include onlychildnodes="true" src="[module:dai_landbrug.dir]/profiles/includes/themegroups.xml" ignore="not ModuleDefined('dai_landbrug')" />
+    <include onlychildnodes="true" src="[module:dai_overfladevand.dir]/profiles/includes/themegroups.xml" ignore="not ModuleDefined('dai_overfladevand')" />
+-->
+   
+    <!--  OIS temakort -->
+    <include src="[module:oistemakort.dir]/profiles/includes/themegroups.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('oistemakort')" />
+
+    <!-- Billeddatabasen -->
+    <include src="[module:imgdb.dir]/profiles/includes/themegroups.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('imgdb')"/>
+
+    <!-- FKG -->
+    <include src="[module:fkgtest.dir]/profiles/includes/themegroups.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('fkgtest')" />
+
+    <!-- Editable data (SpatialEdit / digitize) -->
+    <include src="[module:editable.dir]/profiles/includes/themegroups.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('editable')" />
+
+    <!-- Edittest data (SpatialEdit / digitize) -->
+    <include src="[module:edittest.dir]/profiles/includes/themegroups.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('edittest')" />
+
+    <!-- ECW test -->
+    <include src="[module:ecwtest.dir]/profiles/includes/themegroups.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('ecwtest')" />    
+
+    <!-- Skolegis -->
+    <include src="[module:skolegis.dir]/profiles/includes/themegroups.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('skolegis')" />    
+
+    <!-- Viewshed -->
+    <include src="[module:viewshed.dir]/profiles/includes/themegroups.xml" mustexist="false" onlychildnodes="true" ignore="not ModuleDefined('viewshed')" />
+
+    <!-- MiniMap2 -->
+    <include src="[module:minimap2.dir]/profiles/includes/themegroups.xml" mustexist="false" onlychildnodes="true" ignore="not ModuleDefined('minimap2')" />
+
+    <!-- Aarhus -->
+    <include src="[module:aarhus.dir]/profiles/includes/themegroups.xml" mustexist="false" onlychildnodes="true" ignore="not ModuleDefined('aarhus')" />
+
+    <!-- SpS Training -->
+    <include src="[module:spstraining.dir]/profiles/includes/themegroups.xml" mustexist="false" onlychildnodes="true" ignore="not ModuleDefined('spstraining')" />
+
+    
+</themegroups>

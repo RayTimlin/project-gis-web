@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/modules/byggsamordning/css/byggsamordning.css">
+</head>
+
+<body>
+
+<div id=tableBygg>
+  <div class="main">
+    <div class="layerTable">
+      <div class="titlebarBygg" id="layerTable_titlebar" style="background-color: #687881; padding: 2px;">
+        <h3 class="Bygginline">Byggsamordning</h3>
+        <div class="byggssymb">
+          <div class="bygginline" id="byggshelp" height="24" width="24"></div>
+          <div class="bygginline" id='byggsclose' height="24" width="24"></div>
+        </div>
+      </div>
+      <fieldset>
+        <legend>Välj kartlager: </legend>
+        <div><table class="select_all">
+        </table></div>
+        <div><table class="layerSelBygg">
+          <tr>
+            <td>
+              <label class="containerBygg">
+                  <input type="checkbox" name="layersBygg" value="1" checked>
+                  <div class="accordionBygg" id="accordion">
+                    <div class="tooltip">FGK projekt
+                      <span class="tooltiptext">Pågående investerings- och driftprojekt. Information kommer ur ekonomisystem och FGKs projektverktyg Antura. Geografiska information skapas i samband med projektdirektivet av kartritare tillsammans med projektledaren.</span>
+                    </div>
+                    <div>
+                      <table class="layerSelBygg-2">
+<!--                         <tr>
+                          <td>
+                            <label class="containerBygg-2">
+                              <span class="legendBygg checkmark" id="legendBygg1-1"></span>
+                              <p class="inline ">Fas</p>
+                              <select class="inline phase querytag" value="1">
+                                 <option value="Alla">Alla</option>
+                                 <option value="Idé">Idé</option>
+                                 <option value="Utredningar och förberedande arbete">Utredningar och förberedande arbete</option>
+                                 <option value="Genomförande">Genomförande</option>
+                                 <option value="Garantifas">Garantifas</option>
+                                 <option value="Drift och underhåll">Drift och underhåll</option>
+                              </select>
+                            </label>
+                          </td>
+                        </tr> -->
+                        <tr>
+                          <td>
+                            <label class="containerBygg-2">
+                              <span class="legendBygg checkmark" id="legendBygg1-2"></span>
+                              <p class="inline">Kategori</p>
+                              <select class="inline port querytag" value="1">
+                                <option value="Alla">Alla</option>
+                                <option value="Befintlig miljö">Befintlig miljö</option>
+                                <option value="Exploatering">Exploatering</option>
+                                <option value="Fastighet/byggnader">Fastighet/byggnader</option>
+                                <option value="Mobilitet">Mobilitet</option>
+                                <option value="Stadsmiljöutveckling">Stadsmiljöutveckling</option>
+                                <option value="Storstadspaketet">Storstadspaketet</option>
+                            </select>
+                            </label>
+                          </td>
+                        </tr>
+                         <!--  <tr>
+                          <td>
+                            <label class="containerBygg-2">
+                              <span class="legendBygg checkmark" id="legendBygg1-3"></span>
+                              <p class="inline">Vertksamhetstyp</p>
+                              <select class="inline kategori querytag" value="1">
+                                <option value="Alla">Alla</option>
+                                 <option value="Investering">Investering</option>
+                                 <option value="DRIFT">Drift</option>
+                                 <option value="EXPLOATERING">Exploatering</option>
+                            </select>
+                            </label>
+                          </td>
+                        </tr> -->
+                      </table>
+                    </div>
+                  </div>
+                  <span class="legendBygg checkmark" id="legendBygg1"></span>
+                </label>
+              </td>
+            </tr>
+           <!--  <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layersBygg" value="7" class="tooltip">
+                  <div class="tooltip">Övriga investeringar
+                    <span class="tooltiptext">Med övriga investeringar menar man projekter som inte ingår i Antura men kan påverka trafik. Ansvariga ska rita in sina projekt</span>
+                  </div>
+                  <span class="legendBygg checkmark" id="legendBygg7"></span>
+                </label>
+              </td>
+            </tr> -->
+          <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layersBygg" value="2" class="tooltip">
+                  <div class="tooltip"> Beläggningsprogrammet
+                    <span class="tooltiptext">Visa årets beläggningsprogram. Offentlig miljö ansvarar för data</span>
+                  </div>
+                  <span class="legendBygg checkmark" id="legendBygg2"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layersBygg" value="3">
+                  <div class="tooltip"> Belamringar
+                    <span class="tooltiptext">Visa belamringar. Upplåtelse ansvarar för data</span>
+                  </div>
+                  <span class="legendBygg checkmark" id="legendBygg3"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layersBygg" value="4">
+                  <div class="tooltip"> Grävningstillstånd
+                    <span class="tooltiptext">Visa grävningstillstånd. Data uppdateras varje dag från GRETA</span>
+                  </div>
+                  <span class="legendBygg checkmark" id="legendBygg4"></span>
+                </label>
+              </td>
+            </tr>
+             <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layersBygg" value="5" >
+                  <div class="tooltip"> Uteserveringar
+                    <span class="tooltiptext">Uteserveringar från hög säsongen ingår. Upplåtelse ansvarar för data</span>
+                  </div>
+                  <span class="legendBygg checkmark" id="legendBygg5"></span>
+                </label>
+              </td>
+            </tr>
+         <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layersBygg" value="6">
+                  <div class="tooltip"> Fritidsanläggningar/Försäljningsplatser
+                    <span class="tooltiptext">Fritidsanläggningar / Försäljningsplatser. Upplåtelse ansvarar för data</span>
+                  </div>
+                  <span class="legendBygg checkmark" id="legendBygg6"></span>
+                </label>
+              </td>
+            </tr>
+          <!--     <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layersBygg" value="8">
+                  <div class="tooltip"> Projekt (FK)
+                    <span class="tooltiptext">Visa Fastighetskontorets projekt. FK ansvarar för data</span>
+                  </div>
+                  <span class="legendBygg checkmark" id="legendBygg8"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layersBygg" value="9">
+                  <div class="tooltip">  Uteserveringar
+                    <span class="tooltiptext">Behövs omstruktuering för att fungera. Upplåtelse ansvarar för data</span>
+                  </div>
+                  <span class="legendBygg checkmark" id="legendBygg9"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layersBygg" value="10">
+                  <div class="tooltip">  Trafikavstängingar
+                    <span class="tooltiptext">Behövs omstruktuering för att fungera. Upplåtelse ansvarar för data</span>
+                  </div>
+                  <span class="legendBygg checkmark" id="legendBygg10"></span>
+                </label>
+              </td>
+            </tr> -->
+          </table></div>
+        </fieldset>
+      </div>
+
+  <script id="contactInfo" type="text/template">
+    <p>
+      Man kan styra lager för byggsamordning från denna verktyg
+    </p>
+  </script>
+
+  <table id="byggDatumBox">
+    <tr id="datumBygg">
+      <td>Start:</td>
+      <td><input type="text" name="" value="" class="init_date"></td>
+    </tr>
+    <tr id="datumBygg">
+      <td>Slut:</td>
+      <td><input type="text" name="" value="" class="last_date"></td>
+    </tr>
+  </table>
+  <div id="dialogBygg" title="Basic dialog">
+</div>
+  <br>
+  </div>
+</div>
+  <script>
+    jq(function() {
+      jq("#accordion").accordion({
+        active: false,
+        collapsible: true
+      });
+    });
+  </script>
+</body>
+
+</html>

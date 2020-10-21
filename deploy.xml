@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy>
+
+    <version>0.1</version>
+
+    <description>Byggsamordning verktyg</description>
+    <param name="module.byggsamordning.data.dir">[module:byggsamordning.dir]/data</param>
+
+    <!-- Directory creation -->
+    <makedir dir="[cbinfo.wwwroot.dir]/modules/byggsamordning/js" />
+    <makedir dir="[cbinfo.wwwroot.dir]/modules/byggsamordning/html" />
+    <makedir dir="[cbinfo.wwwroot.dir]/modules/byggsamordning/css" />
+    <!-- File/dir copy -->
+    <copydir fromdir="[module:byggsamordning.dir]/js" todir="[cbinfo.wwwroot.dir]/modules/byggsamordning/js"
+          replacetext="true" />
+    <!-- File/dir copy -->
+    <copydir fromdir="[module:byggsamordning.dir]/html" todir="[cbinfo.wwwroot.dir]/modules/byggsamordning/html"
+          replacetext="true"/>
+
+    <copydir fromdir="[module:byggsamordning.dir]/css" todir="[cbinfo.wwwroot.dir]/modules/byggsamordning/css"
+                replacetext="true"/>
+
+
+</deploy>

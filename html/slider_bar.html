@@ -1,0 +1,107 @@
+
+<!-- html elements from Göteborgs nystart websiddan -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="verktyg.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="/modules/byggsamordning/css/byggsamordning.css">
+    <!-- <script src="verktyg.js" charset="utf-8"></script> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material Icons" rel="stylesheet">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> -->
+    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+    <!-- <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> -->
+    <!-- <script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script> -->
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Datepicker - Display inline</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  </head>
+
+  <body>
+    <div class="mapSliderContainer">
+      <div style="display:table">
+        <div style="display:table-row; vertical-align:top;">
+          <div style="display: table-cell; vertical-align:top;">
+            <span class="k-widget k-datepicker k-header" style="width: 28px; height: 34px;">
+              <span class="k-picker-wrap k-state-default"><input type="text" id="startBoundsDatePicker" style="width: 100%; height: 34px;" data-role="datepicker" class="k-input" role="combobox" aria-expanded="false" aria-owns="startBoundsDatePicker_dateview" aria-disabled="false">
+                <span unselectable="on" class="k-select" aria-label="select" role="button" aria-controls="startBoundsDatePicker_dateview">
+                  <span class="k-icon k-i-calendar"></span>
+                </span>
+              </span>
+            </span>
+          </div>
+          <div style="display: table-cell; width:99%; vertical-align:top;">
+            <div class="mapSlider ui-rangeSlider ui-rangeSlider-noArrow ui-dateRangeSlider" id="mapSlider" style="position: relative;">
+              <div class="ui-rangeSlider-container" style="position: absolute; width: 88px;">
+                <div class="ui-rangeSlider-innerBar" style="position: absolute; top: 0px; left: 0px; width: 88px;">
+                  <div class="ui-rangeSlider-ruler ui-ruler">
+                    <div class="ui-ruler-scale ui-ruler-scale0">
+                      <div class="ui-ruler-tick myCustomClass" style="display: inline-block; width: 18.7972%;">
+                        <div class="ui-ruler-tick-inner">
+                          <span class="ui-ruler-tick-label">Feb</span>
+                        </div>
+                      </div>
+                    <div class="ui-ruler-tick myCustomClass" style="display: inline-block; width: 20.7832%;">
+                      <div class="ui-ruler-tick-inner">
+                        <span class="ui-ruler-tick-label">Mar</span>
+                      </div>
+                    </div>
+                    <div class="ui-ruler-tick myCustomClass" style="display: inline-block; width: 20.1399%;">
+                      <div class="ui-ruler-tick-inner">
+                        <span class="ui-ruler-tick-label">Apr</span>
+                      </div>
+                    </div>
+                    <div class="ui-ruler-tick myCustomClass" style="display: inline-block; width: 20.8112%;">
+                      <div class="ui-ruler-tick-inner">
+                        <span class="ui-ruler-tick-label">Maj</span>
+                      </div>
+                    </div>
+                    <div class="ui-ruler-tick myCustomClass" style="display: inline-block; width: 19.4685%;">
+                      <div class="ui-ruler-tick-inner">
+                        <span class="ui-ruler-tick-label">Jun</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ui-rangeSlider-bar" style="position: absolute; top: 0px; width: 23.0938px; left: 23.0383px;"></div>
+              <div class="ui-rangeSlider-handle ui-rangeSlider-leftHandle" style="position: absolute; top: 0px; left: 23.0375px;">
+                <div class="ui-rangeSlider-handle-inner"></div>
+              </div>
+              <div class="ui-rangeSlider-handle ui-rangeSlider-rightHandle" style="position: absolute; top: 0px; left: 26.1311px;">
+                <div class="ui-rangeSlider-handle-inner"></div>
+              </div>
+              <div class="ui-rangeSlider-arrow ui-rangeSlider-leftArrow" style="position: absolute; left: 0px; display: none;">
+                <div class="ui-rangeSlider-arrow-inner"></div>
+              </div>
+              <div class="ui-rangeSlider-arrow ui-rangeSlider-rightArrow" style="position: absolute; right: 0px; display: none;">
+                <div class="ui-rangeSlider-arrow-inner"></div>
+              </div>
+              <div class="ui-rangeSlider-label ui-rangeSlider-leftLabel" style="position: absolute; display: block; left: -28.7184px;">
+                <div class="ui-rangeSlider-label-value">2018-03-14</div>
+                <div class="ui-rangeSlider-label-inner"></div>
+              </div>
+              <div class="ui-rangeSlider-label ui-rangeSlider-rightLabel" style="position: absolute; display: block; right: -9.85938px;">
+                <div class="ui-rangeSlider-label-value">2018-04-22</div>
+                <div class="ui-rangeSlider-label-inner"></div>
+              </div>
+          </div>
+          <div style="display: table-cell; vertical-align:top;">
+            <span class="k-widget k-datepicker k-header" style="width: 26px; height: 34px;">
+              <span class="k-picker-wrap k-state-default"><input type="text" id="endBoundsDatePicker" style="width: 100%; height: 34px;" data-role="datepicker" class="k-input" role="combobox" aria-expanded="false" aria-owns="endBoundsDatePicker_dateview" aria-disabled="false">
+                <span unselectable="on" class="k-select" aria-label="select" role="button" aria-controls="endBoundsDatePicker_dateview">
+                  <span class="k-icon k-i-calendar"></span>
+                </span>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>;
+  </body>;
+</html>;

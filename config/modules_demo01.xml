@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modules>
+
+    <!--
+    ===============================================================
+    SpatialMap, copyright Sweco GIS&IT
+    ===============================================================
+    $URL: http://vinkel.ghop.lan/svn/SPS/spatialmap/trunk/spatialmap/WEB-INF/config/demo/modules_demo01.xml $
+    $Date: 2016-08-25 16:38:42 +0200 (Thu, 25 Aug 2016) $
+    $Revision: 10249 $
+    $Author: ELL $
+    ===============================================================
+    -->
+         
+    <!-- ****************************************** --> 
+    <!-- General standard modules                   --> 
+    <!-- ****************************************** --> 
+
+    <include src="[cbinfo.modules.standard]" mustexist="true" onlychildnodes="true" /> 
+
+    <!-- demo01 null skin -->    
+    <module name="demo01-skin" dir="custom/skins/demo01-skin" />
+    <!-- Deploy the sample skin module -->
+    <module name="base_dark" dir="standard/skins/base_dark" />
+    
+    <module name="permission" dir="standard/permission" />   
+    <module name="spatialanalyze" dir="standard/spatialanalyze" />   
+    <module name="spatialaddress" dir="standard/dk/spatialaddress" />
+    <module name="download" dir="standard/download" />
+
+    <module name="minimap" dir="standard/minimap" />
+
+    <module name="minimap2" dir="standard/minimap2.1" />
+    <module name="minimap2-admin" dir="standard/minimap2.1-admin" />
+     
+    <module name="redline" dir="standard/redline" />
+    <module name="favorites" dir="standard/favorites" />
+    <module name="favorites-save" dir="standard/favorites-save" />
+    <module name="osm" dir="standard/osm2" />   
+    <module name="admintools" dir="standard/admintools" permissionlevel="authenticated" />   
+
+    <module name="spatialedit" dir="standard/spatialedit2" />
+    <!-- module name="workspace" dir="standard/workspace2" ignore="not IsDefined(module.workspace.db.type)" /-->
+    <module name="workspace" dir="standard/workspace3" ignore="not IsDefined(module.workspace.db.type)" />
+
+    <!-- "digitize" og "geocode" virker ikke på ArcSDE og shape --> 
+    <module name="digitize" dir="standard/digitize" ignore="'[demo01.site.type]'='arcsde' OR '[demo01.site.type]'='shape'" />
+    <module name="geocode" dir="standard/dk/geocode" ignore="'[demo01.site.type]'='arcsde' OR '[demo01.site.type]'='shape'" />
+
+    <module name="multiselect" dir="standard/multiselect2" />
+    <module name="fileupload" dir="standard/fileupload" />
+    <module name="language-test" dir="standard/language-test" />
+    <module name="gsv" dir="standard/gsv" />   
+    <module name="mapatable" dir="standard/mapatable2" /> 
+    <module name="mapatable-conf" dir="custom/mapatable2-conf" />
+    <module name="dsedit" dir="standard/dsedit" /> 
+    <module name="bbrkommune" dir="standard/dk/bbrkommune" />
+    <module name="spatialcatalog" dir="standard/spatialcatalog" />
+    <module name="mobile" dir="standard/mobile" />   
+    <module name="google-analytics" dir="standard/google-analytics" />
+    <module name="maplessquery" dir="standard/maplessquery2" />
+    <module name="multiselect_api" dir="standard/maplessquery2/multiselect_api" />
+
+    <module name="imgdb" dir="standard/imgdb" ignore="not IsDefined(module.imgdb.db.type)" />
+    
+    <module name="userdata" dir="standard/userdata" ignore="'[demo01.site.type]'='arcsde' OR '[demo01.site.type]'='shape'"/>
+    <module name="userthemes" dir="standard/userthemes" ignore="'[demo01.site.type]'='arcsde' OR '[demo01.site.type]'='shape'"/>
+ 
+    <!-- 
+    <module name="blom" dir="standard/blom" />
+    -->
+    
+    <module name="featureedit" dir="standard/featureedit" permissionlevel="public" />
+    
+
+    <!--  ****************************************** --> 
+    <!--  Danish Standard modules                    --> 
+    <!--  ****************************************** --> 
+
+    <!-- Datamodulet -->
+    <include src="[cbinfo.modules.dir]/standard/dk/datamodul/datamodules.xml" mustexist="true" onlychildnodes="true" />
+ 
+    <module name="afstand" dir="standard/dk/afstand" />
+    <module name="pdkrediger" dir="standard/dk/pdkrediger" />   
+    <module name="oistemakort" dir="standard/dk/oistemakort2" />
+    <module name="emdb" dir="standard/dk/emdb2" ignore="'[demo01.site.type]' == 'extern' OR '[demo01.site.type]' == 'ref'" />
+    <module name="fkgws1" dir="standard/dk/fkgws1" />
+    <module name="analyze" dir="standard/analyze" />
+    
+    <!-- ESDH modules -->
+    <!-- 
+	<module name="esdh" dir="custom/dk/esdh/base" ignore="not IsDefined(fesdesdh.endpoint.type) OR '[demo01.site.type]'='arcsde' OR '[demo01.site.type]'='shape'" />
+	<module name="fesdesdh" dir="custom/dk/esdh/fesd" ignore="not IsDefined(fesdesdh.endpoint.type) OR '[demo01.site.type]'='arcsde' OR '[demo01.site.type]'='shape'" />
+	<module name="fesdsystem" dir="custom/dk/esdh/fesdref" ignore="not IsDefined(fesdesdh.endpoint.type) OR '[demo01.site.type]'='arcsde' OR '[demo01.site.type]'='shape'" />
+    -->
+
+    <!-- Skolegis -->    
+    <module name="skolegis" dir="standard/dk/skolegis" ignore="cbinfo.datasource.endpoint.type!='postgis'" />
+    
+    <!-- FKG -->
+    <!-- Definerer endpoint og datakilder hvis der er connect-parametre til en FKG-database -->
+    <module name="fkg" dir="standard/dk/fkg" ignore="not IsDefined('module.fkg.endpoint.connect')" />
+    <!-- Definerer opsætning til alle FKG-temaer -->
+    <module name="fkgtest" dir="standard/dk/fkgtest" ignore="not IsDefined('module.fkg.endpoint.connect')" />
+    
+
+    <!--  ****************************************** --> 
+    <!--   Danish custom modules                     --> 
+    <!--  ****************************************** --> 
+
+    <!-- module name="find" dir="custom/dk/find" / -->    
+ 
+    <!-- 
+    <module name="flyfotoarkivet" dir="custom/dk/flyfotoarkivet" />
+    -->
+   
+    <module name="cowi" dir="custom/dk/cowi" />
+    <module name="wmsinfo-themeaction" dir="custom/themeactions/wmsinfo" />
+  
+   
+    <!--  ****************************************** --> 
+    <!--  Test modules                               --> 
+    <!--  ****************************************** --> 
+ 
+    <module name="arcgisrest" dir="custom/testmodules/arcgisrest" />
+
+    <!-- module name="fkgtest-herning" dir="custom/testmodules/fkgtest-herning"/ -->
+    <!-- module name="fkgtest-soenderborg" dir="custom/testmodules/fkgtest-soenderborg"/ -->     
+    <!-- module name="epsg4326test" dir="custom/testmodules/epsg4326test" ignore="demo01.site.type == 'extern'" / -->     
+    <!-- module name="textreplacement" dir="custom/testmodules/textreplacement"/ -->   
+    <!-- module name="bicycleroute" dir="custom/dk/bicycleroute"/ -->   
+    <!-- module name="systemtest" dir="custom/testmodules/systemtest"/ -->
+    <!-- module name="esbjerg" dir="custom/testmodules/esbjerg"/ -->
+    <!-- module name="testredirect" dir="custom/testmodules/testredirect"/ -->
+    <!-- module name="importexport" dir="custom/testmodules/importexport"/ -->   
+    <!-- module name="mapajax"     dir="custom/mapajax/1.1/mapajax1.1"/ -->
+    <!-- module name="mapajaxdemo" dir="custom/mapajax/1.1/mapajaxdemo1.1"/ -->
+    <!-- module name="executelist" dir="custom/testmodules/executelist" / -->
+    <!-- module name="workshop.jsintegration" dir="custom/workshop/jsintegration" / -->
+    <!-- module name="jsptest" dir="custom/testmodules/jsptest"  / -->
+    <!-- module name="dscopytest" dir="custom/testmodules/dscopytest" ignore="not IsDefined('module.viewshed.db.table')"/ -->
+    <!-- module name="parmreplacetest" dir="custom/testmodules/parmreplacetest" / -->
+    <!-- module name="findfisken" dir="custom/dk/findfisken" / -->   
+    <!-- module name="aarhus" dir="custom/testmodules/aarhus"/ -->
+    <!-- module name="uniontest" dir="custom/testmodules/uniontest" / -->
+    
+    <module name="geopdf" dir="custom/geopdf" />
+    <module name="ecwtest" dir="custom/testmodules/ecwtest" ignore="not IsDefined('module.ecwtest.data.dir')" />
+    <module name="smqltest" dir="custom/testmodules/smqltest" />
+    <module name="shptest" dir="standard/test/shptest" />
+    <module name="smqlbuilder" dir="custom/smqlbuilder" />
+    <module name="movia" dir="custom/testmodules/movia"/>
+
+    <!-- This test module is enabled if the appropriate parameter is set -->
+
+    <module name="massive" dir="custom/massive" ignore="demo01.site.type == 'extern'" />
+    <module name="minimap2themes" dir="custom/minimap2themes" />
+    <module name="viewshed" dir="custom/viewshed" ignore="not IsDefined('module.viewshed.db.table')" />
+    <module name="editable" dir="custom/editable" ignore="not IsDefinedAndTrue(module.editable.enabled)" />
+    <module name="edittest" dir="custom/edittest"  ignore="not IsDefinedAndTrue(module.edittest.enabled)" />
+
+    <module name="pivot" dir="standard/pivot" />
+    
+    <module name="spstraining" dir="C:\Users\nsm\Desktop\Malmø kursus\spstraining" />
+    
+    
+    
+</modules>

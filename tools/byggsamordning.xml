@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tool>
+    <displayname><![CDATA[Byggsamordning]]></displayname>
+    <tooltip><![CDATA[Byggsamordning-test]]></tooltip>
+
+    <requires>
+      <file type="script" name="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js" />
+        <file type="script" name="/modules/mmap-modulMall/js/bundle.js" />
+        <file type="script" name="/modules/byggsamordning/js/jQAllRangeSliders-min.js" />
+        <file type="css" name="/modules/byggsamordning/css/byggsamordning.css" />
+        <file type="css" name="/modules/byggsamordning/css/slider.css" />
+        <file type="css" name="/modules/byggsamordning/css/iThing.css" />
+    </requires>
+
+
+    <description><![CDATA[The description of the tool, used by SSM]]></description>
+    <cbinfo-metadata>
+    <param name="tool.help.text"><![CDATA[Help text]]></param>
+    <!-- <onclick>conzoom()</onclick> -->
+    </cbinfo-metadata>
+
+    <!-- js to be executed on button click -->
+    <onclick>clickByggsamordning()</onclick>
+    <!-- This is executed on <body> load -->
+    <src><![CDATA[
+
+    ]]></src>
+
+    <!-- The contents of jssrc is injected into the html <head> of the main document -->
+
+      <jssrc><![CDATA[
+        var byggsamordningGui = null;
+        window.console.log("ray")
+            function clickByggsamordning() {
+            if (!byggsamordningGui) {
+              require(["/modules/byggsamordning/js/byggsamordning.js"], function() {
+               byggsamordningstart();
+               console.log('Byggsamordning')
+             });
+            } else {
+              byggsamordningstart();
+            }
+            }
+            function byggsamordningstart() {
+            if (!byggsamordningGui) {
+              var no=1;
+              byggsamordningGui = byggsamordning.show(no);
+              }else
+              {
+              var no=2;
+              byggsamordningGui = byggsamordning.show(no);
+              }
+         }
+
+        ]]></jssrc>
+
+
+    <!-- This will be appended to the html <body> of the main document - often used for hidden html which is later injected into a dialog -->
+    <htmlsrc><![CDATA[
+
+    ]]></htmlsrc>
+</tool>

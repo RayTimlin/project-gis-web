@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<themes>
+
+    <!-- 
+    ===============================================================
+    SpatialMap, copyright Sweco GIS&IT
+    ===============================================================
+    $URL: http://vinkel.ghop.lan/svn/SPS/spatialmap/trunk/spatialmap/WEB-INF/config/profiles/includes/custom/demo01_themes.xml $ 
+    $Date: 2016-08-05 13:25:44 +0200 (Fri, 05 Aug 2016) $
+    $Revision: 10121 $ 
+    $Author: ELL $
+    =============================================================== 
+    -->
+
+    <!-- Mapquest (mq) style -->
+    <theme module="osm" name="theme-osm-mqstyle">
+       <themeselector>
+            <initialstate>visible</initialstate>
+            <group>basemap</group>
+            <selectable>true</selectable>
+            <displayname>[text:osm.theme.mqstyle.displayname]</displayname>
+            <img>/modules/osm/images/osm-mqstyle.png</img>
+        </themeselector>
+        <downloadable>false</downloadable>
+    </theme>
+       
+    <!-- OSM style -->
+    <theme module="osm" name="theme-osm-osmstyle">
+        <themeselector>
+            <initialstate>available</initialstate>
+            <group>basemap</group>
+            <selectable>true</selectable>
+            <displayname>[text:osm.theme.osmstyle.displayname]</displayname>
+            <img>/modules/osm/images/osm-osmstyle.png</img>
+        </themeselector>
+        <downloadable>false</downloadable>
+    </theme>
+
+
+    <theme module="gst" name="theme-gst-dtkskaerm">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>basemap</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_001]</displayname>
+        <selectable>true</selectable>
+        <img>/images/standard/themeicons/kms.png</img>
+      </themeselector>
+    </theme>
+ 
+    <theme module="gst" name="theme-gst-dtkskaerm_daempet">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>basemap</group>
+        <displayname>Dæmpet skærmkort</displayname>
+        <selectable>true</selectable>
+        <img>/images/standard/themeicons/kms.png</img>
+      </themeselector>
+    </theme>
+
+    <theme module="gst" name="theme-gst-dtkskaerm-sh">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>basemap</group>
+        <displayname>Skærmkort S/H</displayname>
+        <selectable>true</selectable>
+        <img>/images/standard/themeicons/kms.png</img>
+      </themeselector>
+    </theme>
+
+    <theme module="gst" name="theme-gst-dtkkort25klassisk">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>basemap</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_004]</displayname>
+        <selectable>true</selectable>
+        <img>/images/standard/themeicons/kms.png</img>        
+      </themeselector>
+    </theme>   
+      
+    <theme module="gst" name="theme-gst-orto_foraar">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>basemap</group>
+        <displayname>GST Ortofoto - forår</displayname>
+        <selectable>true</selectable>
+        <img>/images/standard/themeicons/kms.png</img>
+      </themeselector>
+    </theme> 
+
+    <theme module="gst" name="theme-gst-mat-matrikel">
+      <themeselector>
+        <initialstate>hidden</initialstate>
+        <group>basemap</group>
+        <displayname>Matrikelkort</displayname>
+        <selectable>true</selectable>
+        <img>/images/standard/themeicons/kms.png</img>        
+      </themeselector>
+    </theme>  
+    
+
+    <include onlychildnodes="true" src="[module:flyfotoarkivet.dir]/profiles/includes/themes.xml" ignore="not ModuleDefined('flyfotoarkivet')" />
+
+    <include onlychildnodes="true" src="[module:blom.dir]/profiles/includes/themes.xml" ignore="not ModuleDefined('blom')" />
+
+    <include onlychildnodes="true" src="[module:cowi.dir]/profiles/includes/themes.xml" ignore="not ModuleDefined('cowi')" />
+
+    <theme dir="custom/demo01" name="theme-teknisk-grundkort">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>teknisk.adm</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_010]</displayname>
+        <selectable>true</selectable>
+        <img>/images/custom/themeicons/tech-basemap.png</img>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-matrikel-skel">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>teknisk.adm</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_011]</displayname>
+        <selectable>true</selectable>
+        <img>/images/custom/themeicons/parcels.png</img>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+    
+    <theme dir="custom/demo01" name="theme-dougnut-test" ignore="cbinfo.datasource.endpoint.type .ne. 'arcsde'">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>teknisk.adm</group>
+        <displayname>Dougnut test</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-kloakoplande">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>vvs</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_013]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-kloak">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>vvs</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_014]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-nedloebriste">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>vvs</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_015]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-brandstander">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>vvs</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_016]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-vand">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>vvs</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_017]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-signalskabe">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>vejtrafik</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_018]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-signalskabe-character-reference">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>vejtrafik</group>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <!-- Dummy tema til at teste interlaced PNG på Linux -->
+    <theme dir="custom/demo01" name="theme-campingpladser-interlaced">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>vejtrafik</group>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-vejstatus">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>vejtrafik</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_019]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-saltning">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>vejtrafik</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_020]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-telefonbokse">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>vejtrafik</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_021]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-byggelinier_byplanlaegning">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>byplan</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_022]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-soebeskyttelseslinie_byplanlaegning">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>byplan</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_023]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-by-og_landzone">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>byplan</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_024]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-arealanvendelse">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>byplan</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_025]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-byplaner">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>byplan</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_026]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-pdk-lokalplan-wfs" ignore="not moduleDefined('plansystem')">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>byplan</group>
+        <displayname>WFS renderede lokalplaner</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+    
+    <theme dir="custom/demo01" name="theme-lokalplaner">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>byplan</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_027]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+    
+
+    <theme dir="custom/demo01" name="theme-kommuneplan">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>byplan</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_028]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-byggesag" ignore="not ModuleDefined('digitize')">
+      <themeselector>
+        <initialstate>hidden</initialstate>
+        <group>byg</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_012]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+    </theme>
+
+    <theme module="findfisken" name="findfisken_feltproever" ignore="not ModuleDefined('findfisken')">
+      <themeselector>
+        <initialstate>hidden</initialstate>
+        <group>findfisken</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_049]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>false</downloadable>
+    </theme>
+
+    <theme module="findfisken" name="findfisken_stationer" ignore="not ModuleDefined('findfisken')">
+      <themeselector>
+        <initialstate>hidden</initialstate>
+        <group>findfisken</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_050]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>false</downloadable>
+    </theme>
+
+    <theme module="epsg4326test" name="epsg4326test-lokalplaner" ignore="not ModuleDefined('epsg4326test')">
+      <themeselector>
+        <initialstate>hidden</initialstate>
+        <group>oevrig</group>
+        <displayname>Test af lokalplaner i EPSG 4326 (lat/long)</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>false</downloadable>
+    </theme>
+    
+    <theme module="epsg4326test" name="epsg4326test-vejstatus" ignore="not ModuleDefined('epsg4326test')">
+      <themeselector>
+        <initialstate>hidden</initialstate>
+        <group>oevrig</group>
+        <displayname>Test af vejstatus i EPSG 4326 (lat/long)</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>false</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-byggelinier_byggesagsbehandling">
+      <themeselector>
+        <initialstate>hidden</initialstate>
+        <group>byg</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_022]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-soebeskyttelseslinie_byggesagsbehandling">
+      <themeselector>
+        <initialstate>hidden</initialstate>
+        <group>byg</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_023]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-georefererede_bygninger">
+      <themeselector>
+        <initialstate>hidden</initialstate>
+        <group>byg</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_029]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-kuber">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>miljoaff</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_030]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-toemning_af_dagrenovation">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>miljoaff</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_031]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-skoledistrikt">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>skole</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_032]</displayname>
+        <selectable>true</selectable>
+        <img>/images/custom/themeicons/schooldistricts.png</img>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-skoledistrikt-centroide">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>skole</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname.school_district_centroid]</displayname>
+        <selectable>true</selectable>
+        <img>/images/custom/themeicons/schooldistricts.png</img>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-skoler">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>skole</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_033]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-bibliotek">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>skole</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_034]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-daginstitutioner">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>skole</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_035]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+    </theme>
+
+
+
+    <theme dir="custom/demo01" name="theme-boligselskaber">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>oevrig</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_037]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-grundejerforeninger">
+      <themeselector>
+        <initialstate>hidden</initialstate>
+        <group>oevrig</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_038]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme ignore="not DatasourceDefined('ds_grundejerforeninger_defrev')" dir="custom/demo01" name="theme-grundejerforeninger-defrev">
+      <themeselector>
+        <initialstate>hidden</initialstate>
+        <group>oevrig</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_039]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme ignore="not DatasourceDefined('ds_grundejerforeninger_rev')" dir="custom/demo01" name="theme-grundejerforeninger-rev">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>oevrig</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_040]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-energidistrikter">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>oevrig</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_041]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme dir="custom/demo01" name="theme-valgdistrikt">
+      <themeselector>
+        <initialstate>available</initialstate>
+        <group>oevrig</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_043]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>true</downloadable>
+    </theme>
+
+    <theme ignore="not ModuleDefined('digitize')" dir="custom/demo01" name="theme-komkunder">
+      <themeselector>
+        <initialstate>hidden</initialstate>
+        <group>oevrig</group>
+        <displayname>[text:custom.profile.demo01.themes.displayname_044]</displayname>
+        <selectable>true</selectable>
+      </themeselector>
+      <downloadable>false</downloadable>
+    </theme>
+
+    <theme name="theme-esbjerg-jordstykke" module="esbjerg" ignore="not ModuleDefined('esbjerg')">
+      <themeselector>
+        <selectable>true</selectable>
+        <group>oevrig</group>
+        <displayname>Esbjerg jordstykke</displayname>
+        <initialstate>hidden</initialstate>
+      </themeselector>
+      <downloadable>true</downloadable>      
+    </theme>
+    
+   <theme name="theme-esbjerg-byggesag" module="esbjerg" ignore="not ModuleDefined('esbjerg')">
+      <themeselector>
+        <selectable>true</selectable>
+        <group>oevrig</group>
+        <displayname>Esbjerg byggesag</displayname>
+        <initialstate>hidden</initialstate>
+      </themeselector>
+      <downloadable>true</downloadable>      
+    </theme> 
+    
+   <theme name="theme-moviabuslinje" module="movia">
+      <themeselector>
+        <selectable>true</selectable>
+        <group>oevrig</group>
+        <displayname>Movia buslinjer</displayname>
+        <initialstate>available</initialstate>
+      </themeselector>
+      <downloadable>true</downloadable>      
+    </theme> 
+    
+
+   <!--  
+   <theme name="theme-fv_t_5101_art_fugl" module="fkg">
+      <themeselector>
+        <selectable>true</selectable>
+        <group>oevrig</group>
+        <displayname>FKG art fugl</displayname>
+        <initialstate>hidden</initialstate>
+      </themeselector>
+      <downloadable>true</downloadable>      
+    </theme>
+    --> 
+    
+<!-- 
+    <theme ignore="not ModuleDefined('bicycleroute')" name="bicycleroute-route" module="bicycleroute">
+      <themeselector>
+        <selectable>true</selectable>
+        <group>oevrig</group>
+        <displayname>]]text:bicycleroute.themes.route.displayname[[</displayname>
+        <initialstate>hidden</initialstate>
+      </themeselector>
+    </theme>
+-->
+     
+    <theme name="theme-popgrid"  dir="custom/demo01">
+      <themeselector>
+        <selectable>true</selectable>
+        <group>oevrig</group>
+        <displayname>PopGrid</displayname>
+        <initialstate>hidden</initialstate>
+      </themeselector>
+    </theme>
+   
+    <theme name="arcgisrest_besigtigelsepunkter"  module="arcgisrest">
+      <themeselector>
+        <selectable>true</selectable>
+        <group>oevrig</group>
+        <displayname>ArcGIS REST DAI besigtigelsespunkter</displayname>
+        <initialstate>available</initialstate>
+      </themeselector>
+    </theme>
+
+    <theme name="theme-fkgtest-soenderborg-skoledist" module="fkgtest-soenderborg">
+      <themeselector>
+        <selectable>true</selectable>
+        <group>fkgtest</group>
+        <displayname>Skoledistrikter i Sønderborg</displayname>
+        <initialstate>hidden</initialstate>
+      </themeselector>
+    </theme>
+    
+    <theme name="uniontest_n2000_omr_buffer300" module="uniontest">
+      <themeselector>
+        <selectable>true</selectable>
+        <group>oevrig</group>
+        <displayname>Udvalgte Natura 2000 områder med 300m buffer</displayname>
+        <initialstate>available</initialstate>
+      </themeselector>
+    </theme>
+    
+    
+    <!-- FKG -->
+    <include src="[module:fkgtest.dir]/profiles/includes/themes.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('fkgtest')" />
+    
+    <!-- Billeddatabasen -->
+    <include src="[module:imgdb.dir]/profiles/includes/themes.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('imgdb')"/>
+
+    <!-- Datamodulet -->
+    <include src="[module:datamodul.dir]/profiles/includes/themes.xml" onlychildnodes="true" ignore="not ModuleDefined('datamodul')" mustexist="true" />
+ 
+    <!-- ECW test -->
+    <include src="[module:ecwtest.dir]/profiles/includes/themes.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('ecwtest')" />
+    
+    <!-- Skolegis -->
+    <include src="[module:skolegis.dir]/profiles/includes/themes.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('skolegis')" />    
+    
+    <!-- Editable themes -->
+    <include src="[module:editable.dir]/profiles/includes/themes.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('editable')" />
+
+    <!-- Edittest themes -->
+    <include src="[module:edittest.dir]/profiles/includes/themes.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('edittest')" />
+
+    <!-- Viewshed -->
+    <include src="[module:viewshed.dir]/profiles/includes/themes.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('viewshed')" />
+
+    <!-- MiniMap2 -->
+    <include src="[module:minimap2.dir]/profiles/includes/themes.xml" mustexist="false" onlychildnodes="true" ignore="not ModuleDefined('minimap2')" />
+    
+    <!-- Aarhus -->
+    <include src="[module:aarhus.dir]/profiles/includes/themes.xml" mustexist="false" onlychildnodes="true" ignore="not ModuleDefined('aarhus')" />
+
+    <!-- SpS Training -->
+    <include src="[module:spstraining.dir]/profiles/includes/themes.xml" mustexist="false" onlychildnodes="true" ignore="not ModuleDefined('spstraining')" />
+
+        
+</themes>

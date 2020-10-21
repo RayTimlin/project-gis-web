@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spatialqueries>
+
+    <!-- 
+    ===============================================================
+    SpatialMap, copyright Sweco GIS&IT
+    ===============================================================
+    $URL: http://vinkel.ghop.lan/svn/SPS/spatialmap/trunk/spatialmap/WEB-INF/config/queries/custom/demo01/targetset_demo01.xml $ 
+    $Date: 2015-10-09 17:03:23 +0200 (Fri, 09 Oct 2015) $
+    $Revision: 6641 $ 
+    $Author: ell $
+    =============================================================== 
+    --> 
+
+    <!-- ========================= -->
+    <!-- Targetsets                -->
+    <!-- ========================= -->
+    <targetset name="std_soegning" maxresult="500">
+            <include src="[module:spstraining.dir]/queries/targetset.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('spstraining')" />
+            
+            <include src="[module:viewshed.dir]/queries/targetset.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('viewshed')" />
+            <include src="[module:editable.dir]/queries/targetset.xml" onlychildnodes="true" mustexist="true" ignore="not ModuleDefined('editable')" />
+            
+            <target  displayname="Matrikel" 
+                 presentation="custom/demo01/pres-matrikel" 
+                 themecondition="theme-matrikel-skel"
+                 method="if Lower(GeometryType(selector.shape_wkt)) like '%polygon' then
+                            PolygonOverlap (selector.shape_wkt, target.shape_wkt)>1
+                         else
+                            CommonInteriorPoint (selector.shape_wkt, target.shape_wkt)
+                         endif" 
+                         maxresult="50">
+            <datasource name="ds_matrikelskel" /> 
+        </target>
+        
+        <target  displayname="GST matrikel" 
+                 presentation="[module:gst.dir]/presentations/pres-gst-matrikel" 
+                 themecondition="theme-matrikel-skel"
+                 method="if Lower(GeometryType(selector.shape_wkt)) like '%polygon' then
+                            PolygonOverlap (selector.shape_wkt, target.shape_wkt)>1
+                         else
+                            CommonInteriorPoint (selector.shape_wkt, target.shape_wkt)
+                         endif" 
+                         maxresult="50"
+                 ignore="not ModuleDefined('datamodule')">
+            <datasource name="kms_matrikelregister" />
+        </target>
+        
+        <target displayname="Lokalplan" presentation="custom/demo01/pres-lokalplaner" maxresult="50" themecondition="theme-lokalplaner" srs="25832">
+            <datasource name="ds_lokalplan" />
+        </target>
+
+        <target displayname="Lokalplan i epsg 4326" 
+                ignore="not DatasourceDefined('epsg4326test_lokalplan')"
+                presentation="custom/demo01/pres-lokalplaner" 
+                maxresult="50" 
+                themecondition="epsg4326test-lokalplaner">
+            <datasource name="epsg4326test_lokalplan" />
+        </target>
+        
+        <target displayname="Byplan" presentation="custom/demo01/pres-byplaner" maxresult="50" themecondition="theme-byplaner" srs="25832">
+            <datasource name="ds_byplaner" />
+        </target>
+        <target displayname="Kommuneplan" presentation="custom/demo01/pres-kommuneplan" maxresult="50" themecondition="theme-kommuneplan" srs="25832">
+            <datasource name="ds_kommuneplan" />
+        </target>
+        <target displayname="By-landzone" presentation="custom/demo01/pres-by-landzone" maxresult="50" themecondition="theme-by-og_landzone" srs="25832">
+            <datasource name="ds_by_landzone" />
+        </target>
+        <target displayname="Skoledistrikt" presentation="custom/demo01/pres-skoledistrikter" maxresult="50" themecondition="theme-skoledistrikt" srs="25832">
+            <datasource name="ds_skoledistrikter" />
+        </target>
+        <target displayname="Skole" presentation="custom/demo01/pres-skoler" maxresult="50" themecondition="theme-skoler" srs="25832">
+            <datasource name="ds_skoler" />
+        </target>
+        <target displayname="Tømning af dagrenovation" presentation="custom/demo01/pres-dagreno_tom" maxresult="50" themecondition="theme-toemning_af_dagrenovation" srs="25832">
+            <datasource name="ds_dagreno_tom" />
+        </target>
+
+        <target displayname="Grundejerforening" presentation="custom/demo01/pres-grundejerforeninger" maxresult="50" themecondition="theme-grundejerforeninger" srs="25832">
+            <datasource name="ds_grundejerforeninger" />
+        </target>
+
+        <target displayname="Grundejerforening" ignore="not DatasourceDefined('ds_grundejerforeninger_defrev')" presentation="custom/demo01/pres-grundejerforeninger" maxresult="50" themecondition="theme-grundejerforeninger-defrev" srs="25832">
+            <datasource name="ds_grundejerforeninger_defrev" />
+        </target>
+
+        <target displayname="Grundejerforening" ignore="not DatasourceDefined('ds_grundejerforeninger_rev')" presentation="custom/demo01/pres-grundejerforeninger" maxresult="50" themecondition="theme-grundejerforeninger-rev" srs="25832">
+            <datasource name="ds_grundejerforeninger_rev" />
+        </target>
+
+        <target displayname="Boligselskab" presentation="custom/demo01/pres-boligselskaber" maxresult="50" themecondition="theme-boligselskaber" srs="25832">
+            <datasource name="ds_boligselskaber" />
+        </target>
+        <target displayname="Kube" presentation="custom/demo01/pres-kuber" maxresult="50" themecondition="theme-kuber" srs="25832">
+            <datasource name="ds_kuber" />
+        </target>
+        <target displayname="Bibliotek" presentation="custom/demo01/pres-bibliotek" maxresult="50" themecondition="theme-bibliotek" srs="25832">
+            <datasource name="ds_bibliotek" />
+        </target>
+        <target displayname="Daginstitution" presentation="custom/demo01/pres-daginstitutioner" maxresult="50" themecondition="theme-daginstitutioner" srs="25832">
+            <datasource name="ds_daginstitutioner" />
+        </target>
+        <target displayname="Energidistrikter" presentation="custom/demo01/pres-energidistr" maxresult="50" themecondition="theme-energidistrikter" srs="25832">
+            <datasource name="ds_energidistr" />
+        </target>
+        
+        <target displayname="Valgdistrikter" presentation="custom/demo01/pres-valgdistrikt" themecondition="theme-valgdistrikt" srs="25832">
+            <datasource name="ds_valgdistrikt" />        
+        </target>
+
+<!--
+FIXME: should make this work 
+        <target displayname="Arealanvendelse" themecondition="theme-arealanvendelse" srs="25832">
+            <datasource name="ds_arealanvendelse" />        
+        </target>
+ -->
+        <target displayname="Byggesag" ignore="not ModuleDefined('digitize')" presentation="custom/demo01/pres-byggesag" maxresult="50" themecondition="theme-byggesag" srs="25832">
+            <datasource name="ds_byggesag" />
+        </target>
+
+        <target displayname="Georefererede bygninger" presentation="custom/demo01/pres-byg_georef" maxresult="50" themecondition="theme-theme-georefererede_bygninger" srs="25832">
+            <datasource name="ds_byg_georef" />
+        </target>
+        
+        <!-- Billeddatabasen -->
+        <target displayname="Billeder" ignore="not ModuleDefined('imgdb')" presentation="[module:imgdb.dir]/presentations/pres-imgdb" themecondition="theme-imgdb">
+            <datasource name="imgdb_pictures_read_all" />
+        </target>
+        
+        <!-- Datamodulet -->
+        <include src="[module:datamodul.dir]/queries/targetset.xml" onlychildnodes="true" mustexist="false" />
+
+<!-- 
+        <include ignore="not ModuleDefined('gst')" src="[module:gst.dir]/queries/includes/targetset.xml" onlychildnodes="true" mustexist="true" />
+        <include ignore="not ModuleDefined('plansystem')" src="[module:plansystem.dir]/queries/includes/targetset.xml" nodes="/targetsets/targetset/*" mustexist="true" />
+        <include ignore="not ModuleDefined('geus')" src="[module:geus.dir]/queries/includes/targetset.xml" nodes="/targetsets/targetset/*" mustexist="true" />
+        <include ignore="not ModuleDefined('dai_land')" src="[module:dai_land.dir]/queries/includes/targetset.xml" onlychildnodes="true" mustexist="true" />
+        <include ignore="not ModuleDefined('dai_landbrug')" src="[module:dai_landbrug.dir]/queries/includes/targetset.xml" onlychildnodes="true" mustexist="true" />
+        <include ignore="not ModuleDefined('dai_overfladevand')" src="[module:dai_overfladevand.dir]/queries/includes/targetset.xml" onlychildnodes="true" mustexist="true" />
+        <include ignore="not ModuleDefined('fvm')" src="[module:fvm.dir]/queries/includes/targetset.xml" onlychildnodes="true" mustexist="true" />
+        <include ignore="not ModuleDefined('kulturarv')" src="[module:kulturarv.dir]/queries/includes/targetset.xml" nodes="/targetsets/targetset/*" mustexist="true" />
+-->
+         
+        <!-- OIS temakort -->
+        <include ignore="not ModuleDefined('oistemakort')" src="[module:oistemakort.dir]/queries/includes/targetset.xml" onlychildnodes="true" mustexist="true" />
+
+        <include ignore="not ModuleDefined('findfisken')" src="[module:findfisken.dir]/queries/targetset.xml" nodes="/spatialqueries/targetset/*" mustexist="true" />
+        
+        <include ignore="not ModuleDefined('fesdesdh')" onlychildnodes="true" src="[module:fesdesdh.dir]/queries/includes/targetset.xml" mustexist="true"/>
+        
+        <!-- minimap2themes-->
+        <include ignore="not ModuleDefined('minimap2themes')" onlychildnodes="true" src="[module:minimap2themes.dir]/queries/targets_minimap2.xml" mustexist="true"/>
+
+    </targetset>
+
+    <targetset name="mat_plan" maxresult="500" >
+        <target displayname="Matrikel" presentation="custom/demo01/pres-matrikel" themecondition="theme-matrikel-skel" srs="25832" 
+                 method="if Lower(GeometryType(selector.shape_wkt))='polygon' then
+                            PolygonOverlap (selector.shape_wkt, target.shape_wkt)>1
+                         else
+                            CommonInteriorPoint (selector.shape_wkt, target.shape_wkt)
+                         endif" 
+                         maxresult="50">
+            <datasource name="ds_matrikelskel" />
+        </target>
+
+        <target displayname="GST matrikel" presentation="[module:gmcb.dir]/presentations/pres-gmcb-matrikel_1" themecondition="theme-matrikel-skel" srs="25832"
+                ignore="not DatasourceDefined('kms_matrikelregister')" 
+                 method="if Lower(GeometryType(selector.shape_wkt))='polygon' then
+                            PolygonOverlap (selector.shape_wkt, target.shape_wkt)>1
+                         else
+                            CommonInteriorPoint (selector.shape_wkt, target.shape_wkt)
+                         endif" 
+                         maxresult="50">
+            <datasource name="kms_matrikelregister" />
+        </target>    
+              
+        <target displayname="Lokalplan" presentation="custom/demo01/pres-lokalplaner" maxresult="50" themecondition="theme-lokalplaner" srs="25832">
+            <datasource name="ds_lokalplan" />
+        </target>
+        <target displayname="Byplan" presentation="custom/demo01/pres-byplaner" maxresult="50" themecondition="theme-byplaner" srs="25832">
+            <datasource name="ds_byplaner" />
+        </target>
+        <target displayname="Kommuneplan" presentation="custom/demo01/pres-kommuneplan" maxresult="50" themecondition="theme-kommuneplan" srs="25832">
+            <datasource name="ds_kommuneplan" />
+        </target>
+    </targetset>
+    
+    <targetset name="skoler">
+        <target presentation="[module:mapatable-conf.dir]/presentations/pres-skoler">
+            <datasource name="ds_skoler" /> <!-- The name of the datasource in SpatialMap -->
+        </target>
+    </targetset>
+    
+</spatialqueries>

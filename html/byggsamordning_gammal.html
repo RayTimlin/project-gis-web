@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="verktyg.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <link rel="stylesheet" href="/modules/byggsamordning/css/byggsamordning.css">
+    <!-- <script src="verktyg.js" charset="utf-8"></script> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> -->
+    <!-- <script src="https://cdn.plot.ly/plotly-latest.min.js"></script> -->
+    <!-- <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> -->
+    <!-- <script src="https://openlayers.org/en/v4.6.4/build/ol.js"></script> -->
+    <title></title>
+  </head>
+  <body>
+  <div id = tableBygg>
+    <!-- <div class="dialogheader">
+      <div class="dialogheader_inner">
+        <h3 id="helptitle">Byggsamordning</h3>
+          <i class="material-icons inline" id='closeviswindow'>close</i>
+
+      </div>
+    </div> -->
+
+    <div class="main">
+      <div class = "layerTable">
+      <h4 class="inline">Layers</h4>
+      <table class="layerSel">
+       <tr>
+         <td><input type="checkbox" name="layers" value="1"></td>
+         <td>Investeringar</td>
+         <td class="legendCont">
+           <div class="legend" id="legend1">
+           </div>
+         </td>
+      </tr>
+      <tr>
+       <td><input type="checkbox" name="layers" value="4"></td>
+       <td>Grävtillstånd</td>
+       <td class="legendCont">
+         <div class="legend" id="legend4">
+         </div>
+       </td>
+     </tr>
+     <tr>
+       <td><input type="checkbox" name="layers" value="5"></td>
+       <td>TA-plan</td>
+       <td class="legendCont">
+         <div class="legend" id="legend5">
+        </div>
+      </td>
+     </tr>
+      </table>
+    </div>
+
+
+
+      <!-- <h4>Urval</h4>
+      <p class="inline">Tidsurval:</p>
+      <p class="timetype"><input type="radio" name="timeval" value="0" checked>Enkelt</p>
+      <p class="timetype"><input type="radio" name="timeval" value="1">Avancerat</p> -->
+      <table>
+        <tr>
+          <td>Från datum:</td>
+          <td><input type="date" name="" value="" class="fromdate time"></td>
+        </tr>
+        <tr>
+          <td>Till datum:</td>
+          <td><input type="date" name="" value="" class="todate time"></td>
+        </tr>
+      </table>
+
+      </div>
+      <h4>Visa informationen som</h4>
+      <p class="layer inline"><input type="checkbox" name="points" value="1" checked>Punkter</p>
+      <p class="layer inline"><input type="checkbox" name="graphs" value="1" checked>Diagram</p>
+
+      <h4 class="">Geografiskt urval</h4>
+      <div id="myArea"></div>
+
+
+      <button type="button" name="button" class="updateButton">Uppdatera</button>
+<br>
+      <div class="centering">
+        <p>Fler inställningar</p>
+        <p><i class="material-icons">expand_more</i></p>
+      </div>
+      <div class="hidden customoption">
+        <p>Inställningar för:</p>
+        <select class="inline customsetting">
+          <option value="10">Välj</option>
+          <option value="Investeringar">Investeringar</option>
+        </select>
+        <br>
+      </div>
+
+
+
+      <div class="Investeringar options hidden">
+        <p class="inline">Namn/Nummer</p>
+        <input class="inline" type="text" name="" value="">
+        <p>Fas</p>
+        <select class="inline phase querytag" value="1">
+         <option value="Alla">Alla</option>
+         <option value="BYGGSKEDE">Byggskede</option>
+         <option value="IDE">Idé</option>
+         <option value="FÖRSTUDIE">Förstudie</option>
+         <option value="FÖRPROJEKTERING">Förprojektering</option>
+         <option value="PROJEKTERING">Projektering</option>
+         <option value="GARANTITID">Garantitid</option>
+         <option value="UPPHANDLING">Upphandling</option>
+        </select>
+
+        <p class="inline ">Portfölj</p>
+        <select class="inline port querytag" value="1">
+         <option value="Alla">Alla</option>
+         <option value="NA">Okänd</option>
+
+        </select>
+
+
+      </div>
+    </div>
+
+  </body>
+
+</html>

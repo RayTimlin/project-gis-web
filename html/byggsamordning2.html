@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <link rel="stylesheet" href="/modules/byggsamordning/css/byggsamordning.css"> -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+  <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+  <title></title>
+</head>
+
+<body>
+
+
+<div id=tableBygg>
+  <div class="main">
+    <div class="layerTable">
+      <div class="titlebarBygg" id="layerTable_titlebar" style="background-color: #687881; padding: 2px;">
+        <h3 class="Bygginline">Byggsamordningsverktyg</h3>
+        <div class="byggssymb">
+          <div class="bygginline" id="byggshelp" height="24" width="24"></div>
+          <div class="bygginline" id='byggsclose' height="24" width="24"></div>
+        </div>
+      </div>
+      <fieldset>
+        <legend>Välj lager: </legend>
+        <div><table class="select_all">
+          <!-- <tr>
+            <td>
+              <label class="containerBygg">
+                      <input class="selectall" type="checkbox">
+                          Select/Unselect alla
+                      <span class="legendCont checkmark" id="select_all"></span>
+                </label>
+            </td>
+          </tr> -->
+        </table></div>
+        <div><table class="layerSelBygg">
+          <tr>
+            <td>
+              <label class="containerBygg">
+                  <input type="checkbox" name="layers" value="1" checked>
+                  <div class="accordionBygg" id="accordion">
+                    <div class="tooltip">Antura investeringar
+                      <span class="tooltiptext">Info about antura investeringar här</span>
+                    </div>
+                    <div>
+                      <table class="layerSelBygg-2">
+                        <tr>
+                          <td>
+                            <label class="containerBygg-2">
+                              <span class="legendCont checkmark" id="legend1-1"></span>
+                              <p class="inline ">Fas</p>
+                              <select class="inline phase querytag" value="1">
+                                 <option value="Alla">Alla</option>
+                                 <option value="BYGGSKEDE">Byggskede</option>
+                                 <option value="IDE">Idé</option>
+                                 <option value="FÖRSTUDIE">Förstudie</option>
+                                 <option value="FÖRPROJEKTERING">Förprojektering</option>
+                                 <option value="PROJEKTERING">Projektering</option>
+                                 <option value="GARANTITID">Garantitid</option>
+                                 <option value="UPPHANDLING">Upphandling</option>
+                              </select>
+                            </label>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <label class="containerBygg-2">
+                              <span class="legendCont checkmark" id="legend1-2"></span>
+                              <p class="inline">Portfölj</p>
+                              <select class="inline port querytag" value="1">
+                                <option value="Alla">Alla</option>
+                                <option value="NA">Okänd</option>
+                              </select>
+                            </label>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                  <span class="legendCont checkmark" id="legend1"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layers" value="7" class="tooltip">
+                  <div class="tooltip">Övriga investeringar
+                    <span class="tooltiptext">Info about övriga investeringar här</span>
+                  </div>
+                  <span class="legendCont checkmark" id="legend7"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layers" value="2">
+                  Beläggning
+                  <span class="legendCont checkmark" id="legend2"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layers" value="3">
+                  Belamring
+                  <span class="legendCont checkmark" id="legend3"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layers" value="4">
+                  Grävtillstånd
+                  <span class="legendCont checkmark" id="legend4"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layers" value="5">
+                  TA-plan
+                  <span class="legendCont checkmark" id="legend5"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layers" value="6">
+                  Arrangemang GK
+                  <span class="legendCont checkmark" id="legend6"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layers" value="8">
+                  FK projekt
+                  <span class="legendCont checkmark" id="legend8"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layers" value="9">
+                  Uteservering
+                  <span class="legendCont checkmark" id="legend9"></span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label class="containerBygg">
+                  <input type="checkbox" name="layers" value="10">
+                  Trafikavstängingar
+                  <span class="legendCont checkmark" id="legend10"></span>
+                </label>
+              </td>
+            </tr>
+          </table></div>
+        </fieldset>
+      </div>
+
+  <script id="contactInfo" type="text/template">
+    <p>
+      Man kan styra lager för byggsamordning från denna verktyg
+    </p>
+  </script>
+
+  <table id="byggDatumBox">
+    <tr id="datumBygg">
+      <td>Aktivitet börjat efter:</td>
+      <td><input type="date" name="" value="" class="fromdate"></td>
+    </tr>
+    <tr id="datumBygg">
+      <td>Aktivitet är klar inom:</td>
+      <td><input type="date" name="" value="" class="todate"></td>
+    </tr>
+  </table>
+  <br>
+  </div>
+</div>
+  <script>
+    jq(function() {
+      jq("#accordion").accordion({
+        active: false,
+        collapsible: true
+      });
+    });
+  </script>
+</body>
+
+</html>

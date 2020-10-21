@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href="verktyg.css"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!--  Checkradios plugin  -->
+    <!-- <script src="modules/custom/byggsamordning/jquery-checkradios-master/js/jquery.checkradios.min.js"></script> -->
+    <link rel="stylesheet" href="/modules/byggsamordning/css/byggsamordning.css">
+    <!-- <script src="verktyg.js" charset="utf-8"></script> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- The main styles for the checkradios plugin to provide default styles -->
+    <!-- <link rel="stylesheet" href="modules/custom/byggsamordning/jquery-checkradios-master/css/jquery.checkradios.min.css"/> -->
+
+    <title></title>
+  </head>
+  <body>
+
+  <div id = tableBygg>
+    <div class="main">
+      <div class = "layerTable">
+        <div class="titlebar" id="layerTable_titlebar" style="background-color: #687881; padding: 2px;">
+          <h4 class="inline">Byggsamordningsverktyg</h4>
+          <span class="titleBarButtons">
+            <!-- <span id="layerTable_help_button" style="display:none; background-position: center 1px; background-image: url(/skins/base/images/buttons/i_hjaelp.gif);" alt="[text:standard.button.help]"></span>   -->
+            <span id="layerTable_mm" style="background-image: url(/images/standard/buttons/minimizebutton_white.gif); color: black;"></span>
+            <span id="layerTable_close_button" style="background-image: url(/images/standard/buttons/closebutt.gif); color: black;"></span>
+          </span>
+        </div>
+        <fieldset>
+          <legend>Välj lager: </legend>
+      <table class="layerSel">
+        <tr>
+              <td><input type="checkbox" name="layers" value="1"></td>
+              <td>Investeringar</td>
+              <td class="legendCont">
+                <div class="legend" id="legend1">
+                </div>
+              </td>
+           </tr>
+           <tr>
+            <td><input type="checkbox" name="layers" value="4" checked></td>
+            <td>Grävtillstånd</td>
+            <td class="legendCont">
+              <div class="legend" id="legend4">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="layers" value="5" checked></td>
+            <td>TA-plan</td>
+            <td class="legendCont">
+              <div class="legend" id="legend5">
+             </div>
+           </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="layers" value="6"></td>
+            <td>Pågående kundservice</td>
+            <td class="legendCont">
+              <div class="legend" id="legend6">
+             </div>
+           </td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" name="layers" value="7"></td>
+            <td>Pågående synpunkter</td>
+            <td class="legendCont">
+              <div class="legend" id="legend7">
+             </div>
+           </td>
+          </tr>
+        </table>
+      </fieldset>
+    </div>
+
+    <script id = "contactInfo" type = "text/template">
+      <p>
+        Man kan styra lager för byggsamordning från denna verktyg
+      </p>
+    </script>
+
+      <table>
+        <tr>
+          <td>Aktivitet börjat efter:</td>
+          <td><input type="date" name="" value="" class="fromdate"></td>
+        </tr>
+        <tr>
+          <td>Aktivitet är klar inom:</td>
+          <td><input type="date" name="" value="" class="todate"></td>
+        </tr>
+      </table>
+<br>
+    </div>
+
+  </body>
+
+</html>
